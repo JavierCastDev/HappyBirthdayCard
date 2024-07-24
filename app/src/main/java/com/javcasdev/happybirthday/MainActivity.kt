@@ -20,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -37,8 +38,8 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     GreetingText(
-                        message = "Happy birthday Capi!",
-                        from = "From Javier",
+                        message = stringResource(R.string.happy_birthday_text),
+                        from = stringResource(R.string.signature_text),
                         modifier = Modifier.padding(8.dp)
                     )
                 }
@@ -61,7 +62,7 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
             fontSize = 36.sp,
             modifier = Modifier
                 .padding(16.dp)
-                .align(Alignment.End)
+                .align(Alignment.CenterHorizontally)
         )
     }
 }
